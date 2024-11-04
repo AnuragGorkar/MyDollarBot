@@ -1,0 +1,37 @@
+pyTelegramBotAPI==4.14.0
+pytest==7.4.2
+jproperties==2.1.1
+flake8==6.1.0
+matplotlib==3.8.0
+coverage==7.3.2
+pytest-mock==3.11.1
+python-telegram-bot==20.6
+black==23.10.0
+pylint==3.0.1
+forex-python
+requests~=2.31.0
+telebot~=0.0.5
+python-dateutil~=2.8.2
+setuptools~=65.5.0
+python-telegram-bot-calendar~=1.0.5
+hugchat~=0.3.5
+pandas~=2.0.3
+requests~=2.31.0
+telebot~=0.0.5
+python-dateutil~=2.8.2
+setuptools~=65.5.0
+
+# Core dependencies
+pyTelegramBotAPI>=4.12.0
+python-dotenv>=1.0.0
+Pillow>=10.0.0
+requests>=2.31.0
+
+# Google Gemini AI
+google-generativeai>=0.3.0
+
+# Optional but recommended for better logging
+logging>=0.4.9
+
+openpyxl
+XlsxWriter
