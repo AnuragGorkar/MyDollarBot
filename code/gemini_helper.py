@@ -30,10 +30,13 @@ def process_receipt_image(file_url):
     """Process receipt image using Gemini AI"""
     try:
         model = initialize_gemini()
-
-        # Download and convert to PIL Image
-        response = requests.get(file_url)
-        img = Image.open(BytesIO(response.content))
+    
+        if(type(file_url) == str):
+            # Download and convert to PIL Image
+            response = requests.get(file_url)
+            img = Image.open(BytesIO(response.content))
+        else: 
+            img = file_url
 
         current_date = datetime.now()
 

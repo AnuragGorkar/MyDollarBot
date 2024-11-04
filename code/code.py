@@ -25,6 +25,7 @@ import display_currency
 import chatGPT_ext
 import get_csv
 import scan_receipt
+import scan_mul_receipts
 
 configs = Properties()
 
@@ -151,6 +152,10 @@ def command_category(message):
 @bot.message_handler(commands=['scan_receipt'])
 def command_scan_receipt(message):
     scan_receipt.run(message, bot)
+    
+@bot.message_handler(commands=['scan_mul_receipts'])
+def command_scan_receipt(message):
+    scan_mul_receipts.run(message, bot)
 
 
 # not used

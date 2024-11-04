@@ -21,7 +21,7 @@ bot = telebot.TeleBot(api_token)
 def run(message, bot):
     """Start receipt scanning process"""
     chat_id = message.chat.id
-    bot.send_message(chat_id, 'Please send me a photo of your receipt.')
+    bot.send_message(chat_id, 'Please upload a photo of your receipt.')
     bot.register_next_step_handler(message, handle_receipt_image, bot)
 
 def handle_receipt_image(message, bot):
@@ -38,6 +38,7 @@ def handle_receipt_image(message, bot):
         file_id = message.photo[-1].file_id
         file_info = bot.get_file(file_id)
         file_url = f'https://api.telegram.org/file/bot{bot.token}/{file_info.file_path}'
+        print(file_url)
 
         # Process receipt with Gemini
         result, error = gemini_helper.process_receipt_image(file_url)
